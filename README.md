@@ -20,7 +20,7 @@ Steps to add a new config file:
 
 1. Add your custom `.config` file within the `conf/` directory of this repository.
     - Ensure that the file name ends in `_minotaur.config`.
-    - Ensure your config file declares a profile named `local_paths` that points to the local paths for the `fasta`, `fasta_index`, `bwa_index`, and `seq_dict` parameters.
+    - Ensure your config file declares within its params scope any local paths for the `fasta`, `fasta_index`, `bwa_index`, and `seq_dict` parameters.
 2. Add a new profile in the [minotaur_custom.config](https://github.com/poseidon-framework/minotaur-institutional-configs/blob/main/minotaur_custom.config), named after your profile, which includes your custom config file.
     - For example, if your config file is named `my_custom_minotaur.config`, you would add a profile named `my_custom_minotaur` that includes this config file with `includeConfig()`.
 3. Test your configuration locally to ensure it works as expected.
